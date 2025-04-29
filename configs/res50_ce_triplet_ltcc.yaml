@@ -1,0 +1,30 @@
+DATA:
+  HEIGHT: 384
+  WIDTH: 192
+  TRAIN_BATCH: 64
+  NUM_INSTANCES: 8
+  TEST_BATCH: 512
+TRAIN:
+  OPTIMIZER:
+    NAME: 'adam'
+    LR: 0.00035
+  lr_type: 'step'
+  MAX_EPOCH: 9000
+  LR_SCHEDULER:
+    STEPSIZE: [30, 60]
+TEST:
+  EVAL_STEP: 5
+SEED: 0
+# EVAL_MODE: True
+MODEL:
+  NAME: resnet50
+  # RESUME: '/public/home/G19830015/VideoGroup/lmy/Simple-ReID/logs/ltcc/384*192batch96-gs-ma(36)/best_model.pth.tar'
+LOSS:
+  CLA_LOSS: crossentropylabelsmooth
+  PAIR_LOSS: triplet
+  PAIR_M: 0.3
+  CENTER_LOSS: False    
+  CENTER_LOSS_WEIGHT: 0.0005
+  MA: 0.0
+
+TAG: 384*192batch64-gs-ras2-labelsmooth

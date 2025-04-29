@@ -1,0 +1,20 @@
+DATA:
+    HEIGHT: 384
+    WIDTH: 192
+TRAIN:
+    OPTIMIZER:
+        NAME: 'adam'
+    lr_type: 'step'
+TEST:
+    EVAL_STEP: 5
+SEED: 193743
+MODEL:
+  NAME: resnet50
+  FEATURE_DIM: 4096
+  POOLINGNAME: 'maxavg'
+  # RESUME: '/public/home/G19830015/VideoGroup/lmy/Simple-ReID/logs/prcc_cal/batch64-cal/best_model.pth.tar'
+LOSS:
+  CLA_LOSS: crossentropy
+  PAIR_LOSS: triplet
+  PAIR_M: 0.3
+TAG: 384&4096batch64-ras-ma-cal

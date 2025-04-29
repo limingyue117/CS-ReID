@@ -1,0 +1,27 @@
+DATA:
+  HEIGHT: 256
+  WIDTH: 128
+TRAIN:
+  OPTIMIZER:
+    NAME: 'sgd'
+    LR: 0.08
+  lr_type: 'step'
+  MAX_EPOCH: 9000
+  LR_SCHEDULER:
+    STEPSIZE: [30, 60]
+TEST:
+  EVAL_STEP: 5
+SEED: 2
+# EVAL_MODE: True
+MODEL:
+  NAME: convnext
+  FEATURE_DIM: 768
+  # RESUME: '/public/home/G19830015/VideoGroup/lmy/Simple-ReID/logs/prcc/384*192batch64-gs-ras-ma-ma(epoch)/checkpoint_ep47.pth.tar'
+LOSS:
+  CLA_LOSS: crossentropy
+  PAIR_LOSS: triplet
+  PAIR_M: 0.3
+  CENTER_LOSS: False     
+  CENTER_LOSS_WEIGHT: 0.005
+  MA: 0.0
+TAG: 256*128batch64-convnext
