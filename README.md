@@ -1,4 +1,4 @@
-### A Simple Codebase for Image-based Person Re-identification
+![image](https://github.com/user-attachments/assets/a6442534-8464-4cc7-9c50-ab7322e555ec)### A Simple Codebase for Image-based Person Re-identification
 
 #### Requirements: Python 3.6, Pytorch 1.6.0, yacs
 
@@ -61,9 +61,9 @@
 
 If you use our code in your research or wish to refer to the baseline results, please use the following BibTeX entry.
 
-    @InProceedings{CVPR2019IANet
-    author = {Hou, Ruibing and Ma, Bingpeng and Chang, Hong and Gu, Xinqian and Shan, Shiguang and Chen, Xilin},
-    title = {Interaction-And-Aggregation Network for Person Re-Identification},
-    booktitle = {CVPR},
-    year = {2019}
+    @InProceedings{ICME2024CS
+    author = {Liu Y, Li M, Jing J, et al},
+    title = {Clothing Sampling Based on Active Learning For ClothChanging Person Re-identification},
+    booktitle = {ICME},
+    year = {2024}
     }
